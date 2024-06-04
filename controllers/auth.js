@@ -52,8 +52,6 @@ const googleSingIn = async (req, res = response) => {
      
         const { email, name, picture } = await googleVerify( req.body.token );
 
-        console.log(email, name, picture);
-
         const usuarioDB = await Usuario.findOne( {email} );
         let usuario;
 
